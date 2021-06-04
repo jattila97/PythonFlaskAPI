@@ -9,4 +9,6 @@ az adatokat és ezeket a felületen JS segítségével egy diagramon ábrázolom
 
 Amint látható, ezekről egy-egy docker image-et is készítettem, amelyek fel lettek rakva DockerHub-ra is.
 
+Az ESP8266 src mappa pedig a mikrochipre feltöltött kódot tartalmazza.
+
 A projektben található egy ppt is, amely a Diplomatervezés órának a bemutatókára készítettem a projektről.
