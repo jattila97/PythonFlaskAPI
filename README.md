@@ -8,3 +8,5 @@ MySQL adatbázisnak. Továbbá ezek az adatok le is kérhetőek egy webes felül
 az adatokat és ezeket a felületen JS segítségével egy diagramon ábrázolom ki.
 
 Amint látható, ezekről egy-egy docker image-et is készítettem, amelyek fel lettek rakva DockerHub-ra is.
+
+A projektben található egy ppt is, amely a Diplomatervezés órának a bemutatókára készítettem a projektről.
