@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  mysql:
+    image: test6_mysql
+    container_name: mysql-service
+    ports:
+      - 3306:3306
+    networks:
+      - mikroszolg_network
+    expose:
+      - 3306
+  web:
+    image: test6_web
+    container_name: flask-service
+    ports:
+      - 8091:8091
+    depends_on:
+      - mysql
+    networks:
+      - mikroszolg_network
+    links:
+      - "mysql:mysql"
+
+networks:
+  mikroszolg_network:
+    driver: bridge

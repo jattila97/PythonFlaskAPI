@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block sideNav %}
+<li><a href="/" method="GET">Home</a></li>
+<li class="active"><a href="/datas">Datas</a></li>
+<canvas id="myChart" class="chart" width="1000" height="1000"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<style>
+.chart
+{
+    position: absolute;
+    top:150px;
+    left:300px;
+}
+</style>
+<script>
+    var a_köv_sor_nem_hibás_mert_JS_be_is_így_kell_python_ból_értéket_kapni_és_NEM_LEHET_KOMMENTELNI;
+    var x = {{values}};
+    var y = {{time|tojson}}
+    let myChart = document.getElementById("myChart").getContext("2d");
+    let chart = new Chart(myChart, {
+    type: 'line',
+    data:{
+        labels:y,
+        datasets:[{
+            label:'Pop',
+            data: x,
+            backgroundColor:'black'
+        }],
+        
+    },
+    options:{layout:{position:{left:500}}}
+    });
+</script>
+{{content}}
+{% endblock %}

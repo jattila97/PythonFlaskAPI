@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block sideNav %}
+<li><a href="/" method="GET">Home</a></li>
+<li class="active"><a href="#">Datas</a></li>
+
+<div class="container">
+    <a href="/datas/Temperature">
+    <img src="/static/images/temperature.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Temperature</div>
+    </div>
+</a>
+</div>
+
+<div class="hum">
+    <div class="container">
+        <a href="/datas/Humidity">
+            <img src="/static/images/humidity.png" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Humidity</div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<style>
+.container {
+  position: absolute;
+  top:90px;
+  left:300px;
+  width: 150px;
+}
+
+.hum .container
+{
+    position: absolute;
+    top:115px;
+    left:600px;
+    width: 150px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff;
+}
+
+.container:hover .overlay {
+  opacity: 0.85;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+
+{% endblock %}
